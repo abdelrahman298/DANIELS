@@ -1,0 +1,962 @@
+:root {
+  --main-color: #343434;
+  --main-font: "Montserrat", sans-serif;
+  --2nd-font: "Poppins", sans-serif;
+  --padding-section: 6rem 0;
+  --bg-color: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-section-title {
+  position: relative;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: var(--main-font);
+  z-index: 3;
+}
+.main-section-title::after {
+  position: absolute;
+  content: "";
+  width: 15rem;
+  height: 2rem;
+  left: 40.4%;
+  top: 25px;
+  background-image: url(../imgs/dots.png);
+  z-index: -1;
+}
+/* !================>Start navbar<=================== */
+
+.navbar-section .navbar {
+  z-index: 5;
+}
+
+.navbar-section .navbar .nav-item .nav-link {
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.navbar-section .navbar .nav-item {
+  padding-inline: 20px;
+}
+
+.navbar-section .nav-item .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+  bottom: 0;
+  left: -100%;
+  transition: 1s;
+}
+/* .navbar-section .nav-item .nav-link:hover::before {
+  width: 100%;
+} */
+
+.navbar-section .nav-item .nav-link.active::before {
+  left: 9%;
+}
+/* !================>end navbar<===================== */
+/* !================>Start header<=================== */
+.header-container .overlay {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.header-container {
+  background-image: url(../imgs/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-container .header-content-container .header-title {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 3.1rem;
+  color: #fff;
+}
+
+.header-container .header-content-container .header-caption {
+  position: relative;
+  font-size: 3.75rem;
+  color: #fff;
+  font-weight: 300;
+  /* text-align: start; */
+  /* padding-left: 6.25rem; */
+  /* background-color: #ca9; */
+}
+
+/* !!!!! word wrapper codes */
+.cd-intro {
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+}
+
+.cd-intro {
+  margin: 4em auto;
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro {
+    margin: 5em auto;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro {
+    margin: 6em auto;
+  }
+}
+
+/* ////////////////////// */
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+/* /////////// */
+
+.cd-headline.clip b {
+  opacity: 0;
+}
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+/* /////////////// */
+.cd-headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+/* .cd-headline.clip .cd-words-wrapper::after {
+  line
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+} */
+.cd-headline.clip b {
+  opacity: 0;
+}
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+/* /////////////// */
+/* !!!!! word wraper codes */
+/* 
+.header-container .header-content-container .header-caption::after {
+  position: absolute;
+  content: "";
+  font-weight: 400;
+
+  height: 40px;
+  width: 3px;
+  bottom: 24%;
+  background-color: #fff;
+  animation: subtitle 8s infinite;
+} */
+/* @keyframes subtitle {
+  0% {
+    content: "|";
+  }
+  1.2% {
+    content: "|";
+  }
+  2.4% {
+    content: "L|";
+  }
+  3.6% {
+    content: "La|";
+  }
+  4.8% {
+    content: "Lar|";
+  }
+  6% {
+    content: "Larr|";
+  }
+  7.2% {
+    content: "Larry|";
+  }
+  8.4% {
+    content: "Larry |";
+  }
+  9.6% {
+    content: "Larry D|";
+  }
+  10.8% {
+    content: "Larry Da|";
+  }
+  12% {
+    content: "Larry Dan|";
+  }
+  13.2% {
+    content: "Larry Dani|";
+  }
+  14.4% {
+    content: "Larry Danie|";
+  }
+  15.6% {
+    content: "Larry Daniels|";
+  }
+  16.8% {
+    content: "Larry Daniels|";
+  }
+  18% {
+    content: "Larry Daniels|";
+  }
+  19.2% {
+    content: "Larry Daniels|";
+  }
+  20.4% {
+    content: "Larry Daniels|";
+  }
+  21.68% {
+    content: "Larry Daniel|";
+  }
+  22.8% {
+    content: "Larry Danie|";
+  }
+  24% {
+    content: "Larry Dani|";
+  }
+
+
+  25.2% {
+    content: "Larry Dan|";
+  }
+  26.4% {
+    content: "Larry Da|";
+  }
+  28.8% {
+    content: "Larry D|";
+  }
+  27.6% {
+    content: "Larry |";
+  }
+  28.8% {
+    content: "Larry|";
+  }
+  30% {
+    content: "Larr|";
+  }
+  31.2% {
+    content: "Lar|";
+  }
+  32.4% {
+    content: "La|";
+  }
+  33.6% {
+    content: "L|";
+  }
+  34.8% {
+    content: "|";
+  }
+  36% {
+    content: "|";
+  }
+  37.2% {
+    content: "|";
+  }
+  38.4% {
+    content: "D|";
+  }
+  39.6% {
+    content: "De|";
+  }
+  40.8% {
+    content: "Dev|";
+  }
+  42% {
+    content: "Deve|";
+  }
+  43.2% {
+    content: "Devel|";
+  }
+  44.4% {
+    content: "Develo|";
+  }
+  45.6% {
+    content: "Develop|";
+  }
+
+  46.8% {
+    content: "Developer|";
+  }
+
+  48% {
+    content: "Developer|";
+  }
+  49.2% {
+    content: "Developer|";
+  }
+  50.4% {
+    content: "Developer|";
+  }
+  51.6% {
+    content: "Developer|";
+  }
+  52.8% {
+    content: "Develope|";
+  }
+  54% {
+    content: "Develop|";
+  }
+  55.2% {
+    content: "Develo|";
+  }
+  56.4% {
+    content: "Devel|";
+  }
+  57.6% {
+    content: "Deve|";
+  }
+  58.8% {
+    content: "Dev|";
+  }
+  60% {
+    content: "De|";
+  }
+  61.2% {
+    content: "D|";
+  }
+  62.4% {
+    content: "|";
+  }
+  63.6% {
+    content: "|";
+  }
+  64.8% {
+    content: "|";
+  }
+
+  66% {
+    content: "D|";
+  }
+  67.2% {
+    content: "De|";
+  }
+  68.4% {
+    content: "Des|";
+  }
+  69.6% {
+    content: "Desi|";
+  }
+
+
+  70.8% {
+    content: "Desig|";
+  }
+
+  72% {
+    content: "Design|";
+  }
+  73.2% {
+    content: "Designe|";
+  }
+  74.4% {
+    content: "Designer|";
+  }
+  75.6% {
+    content: "Designer|";
+  }
+  76.8% {
+    content: "Designer|";
+  }
+  78% {
+    content: "Designer|";
+  }
+  79.2% {
+    content: "Designer|";
+  }
+  80.4% {
+    content: "Designe|";
+  }
+  81.6% {
+    content: "Design|";
+  }
+  82.8% {
+    content: "Desig|";
+  }
+  84% {
+    content: "Desi|";
+  }
+  85.2% {
+    content: "Des|";
+  }
+  86.4% {
+    content: "De|";
+  }
+  87.6% {
+    content: "D|";
+  }
+  88.8% {
+    content: "|";
+  }
+  90% {
+    content: "|";
+  }
+  100% {
+    content: "|";
+  }
+} */
+
+.header-container .header-content-container .social-container .social-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 12px;
+  padding: 5px;
+  background-color: #000;
+}
+
+.header-container .header-content-container .social-container .social-icon a {
+  color: #fff;
+  font-size: 14px;
+  vertical-align: top;
+}
+/* !================>End header<======================= */
+/* !===============>start about<======================= */
+.about-container {
+  padding: var(--padding-section);
+}
+
+.about-container .about-right-container .about-title-caption .about-title {
+  font-weight: 900;
+  font-family: var(--main-font);
+}
+.about-container .about-right-container .about-title-caption .about-caption {
+  color: #000000;
+  opacity: 0.4;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.about-container .about-right-container .about-para {
+  color: #000000;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.about-container .about-right-container .skills .progress {
+  height: 26px !important;
+  box-shadow: inset 0 0 4px 0px #6d6d6d;
+}
+.about-container .about-right-container .skills .progress-bar {
+  background-color: #000;
+}
+.about-container .about-right-container .skills .progress-bar:first-child {
+  font-weight: 700;
+}
+.about-container .about-right-container .about-buttons .btn-download {
+  transition: all 0.5s;
+}
+.about-container .about-right-container .about-buttons .btn-download:hover {
+  background-color: #fff;
+  color: #000;
+}
+.about-container .about-right-container .about-buttons .btn-contact {
+  transition: all 0.5s;
+}
+.about-container .about-right-container .about-buttons .btn-contact:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+.about-container .about-right-container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.about-container .about-left-container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.about-container .about-left-container .img-container {
+  position: relative;
+  padding: 0 0 30px 30px;
+}
+.about-container .about-left-container .img-container::after {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute !important;
+  background-image: url(../imgs/dots.png) !important;
+  background-position: center center;
+  background-repeat: repeat;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  /* background-color: red; */
+}
+/* !===============>End about<======================= */
+
+/* !===============>start services<======================= */
+
+.services-container {
+  padding: var(--padding-section);
+  background-color: var(--bg-color);
+}
+
+.services-container .services-content-container .services-card-container {
+  padding: 2rem 2.9rem;
+}
+
+.services-container
+  .services-content-container
+  .services-card-container
+  .service-icon {
+  font-size: 27px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s;
+}
+
+.services-container
+  .services-content-container
+  .services-card-container:hover
+  .service-icon {
+  background-color: #000;
+  color: #fff;
+}
+
+.services-container
+  .services-content-container
+  .services-card-container
+  .service-icon
+  i {
+  transform: translateY(50%);
+}
+
+.services-container
+  .services-content-container
+  .services-card-container
+  .service-card-content
+  h5 {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-family: var(--main-font);
+}
+
+.services-container
+  .services-content-container
+  .services-card-container
+  .service-card-content
+  p {
+  color: #000000;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+/* !===============>End services<======================= */
+/* !===============>start portfolio<==================== */
+
+.portfolio-content-container .nav-item .nav-link {
+  color: #000;
+  font-weight: 700;
+}
+
+.portfolio-content-container .nav-item .nav-link.active {
+  background-color: #0000 !important;
+  position: relative;
+}
+.portfolio-content-container .nav-item .nav-link.active::before {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 2.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+}
+.portfolio-container {
+  padding: var(--padding-section);
+}
+.portfolio-container .portfolio-content-container .portfolio-card {
+  position: relative;
+}
+
+/* ? hover img */
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card:hover
+  .overlay-img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-container .portfolio-content-container .portfolio-card .overlay-img {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  font-family: var(--main-font);
+  /* padding: 0rem; */
+  background-color: #ffffffef;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.6s;
+}
+
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card
+  .overlay-img
+  h6 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* ? hover btns */
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card:hover
+  .overlay-btns {
+  transform: translateY(0);
+}
+
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card
+  .overlay-btns {
+  /* transform: translateY(8px); */
+  transform: translateY(1rem);
+  transition: all 0.6s 0.2s;
+}
+
+.portfolio-container .portfolio-content-container .portfolio-card .overlay-btn {
+  color: #fff;
+  font-size: 1rem;
+  background-color: #000;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card
+  .overlay-btn:hover {
+  color: #000;
+  outline: 1px solid #000;
+  background-color: #fff;
+}
+
+.portfolio-container
+  .portfolio-content-container
+  .portfolio-card
+  .overlay-btn
+  i {
+  vertical-align: bottom;
+}
+/* !===============>End portfolio<====================== */
+/* !===============>start testimonial<====================== */
+.testimonial-container {
+  padding: var(--padding-section);
+  background-color: var(--bg-color);
+}
+
+.testimonial-container .carousel-inner {
+  margin-top: 3rem;
+}
+
+.testimonial-container .carousel-inner .carousel-item .carousel-img-container {
+  width: 5rem;
+  /* height: ; */
+}
+.testimonial-container
+  .carousel-inner
+  .carousel-item
+  .carousel-img-container
+  img {
+  border-radius: 50%;
+}
+
+.testimonial-container .carousel-inner .carousel-item .carousel-caption {
+  position: static;
+  width: 70%;
+  color: #6d6d6d;
+}
+
+.testimonial-content-container .carousel-indicators {
+  position: static !important;
+}
+
+.testimonial-content-container .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #505050;
+}
+/* !===============>End testimonial<====================== */
+/* !===============>start numbers<====================== */
+
+.number-section {
+  padding: var(--padding-section);
+}
+.number-section .number-card-container {
+  font-family: var(--main-font);
+}
+.number-section .number-card-container i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.number-section .number-card-container h2 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.number-section .number-card-container p {
+  line-height: 1.6;
+  font-weight: 600;
+  font-size: 15px;
+  color: #748182;
+}
+/* !===============>End numbers<====================== */
+/* !===============>start team<====================== */
+
+.team-container {
+  padding: var(--padding-section);
+  background-color: var(--bg-color);
+}
+
+.team-container .team-content-container {
+  margin-top: 6rem;
+}
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-data-container {
+  background-color: #5b5b5b;
+  color: #fff;
+  font-family: var(--2nd-font);
+  border-radius: 0 0 10px 10px;
+}
+
+.team-container .team-content-container .team-card-content .card-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ? hover of image */
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container
+  img {
+  transition: all 0.5s;
+}
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container:hover
+  img {
+  transform: scale(1.2, 1.2);
+}
+
+/* ? hover of image */
+
+/* ? hover of overlay-image */
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container
+  .overlay-img {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  bottom: 20%;
+  right: 20%;
+  font-family: var(--main-font);
+  /* padding: 0rem; */
+  background-color: #ffffffef;
+  z-index: 1;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.team-container .team-content-container .team-card-content:hover .overlay-img {
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  transform: rotateY(360deg);
+  opacity: 1;
+}
+/* 
+
+
+/* ? hover of overlay-image */
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container
+  .overlay-img
+  .overlay-btns
+  .overlay-btn {
+  font-size: 1.3rem;
+  background-color: #000;
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container
+  .overlay-img
+  .overlay-btns
+  .overlay-btn
+  a {
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.team-container
+  .team-content-container
+  .team-card-content
+  .card-img-container
+  .overlay-img
+  .overlay-btns
+  .overlay-btn
+  a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.team-container .card-data-container p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/* !===============>End team<====================== */
+/* !===============>start contact<====================== */
+.contact-container {
+  padding: var(--padding-section);
+}
+
+.contact-container .contact-info-container {
+  margin: 4rem 0;
+}
+
+.contact-container .contact-item .icon {
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+}
+
+.contact-container .contact-item:hover .icon {
+  background-color: #000;
+  color: #fff;
+}
+
+.contact-container .contact-item .icon i {
+  vertical-align: sub;
+  margin-top: 1rem;
+}
+
+.contact-container .contact-item h6 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-container .contact-item p {
+  font-size: 15px;
+  color: #748182;
+}
+
+/* ?Inputs */
+
+.contact-input-container .top-inputs input {
+  height: 2.2rem;
+  padding: 1rem;
+  background-color: #c5c5c51a;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-input-container .bottom-inputs .message {
+  height: 12rem;
+  padding: 1rem;
+  background-color: #c5c5c51a;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+.contact-input-container .bottom-inputs input {
+  width: 10rem;
+  transition: all 0.5s;
+}
+.contact-input-container .bottom-inputs input:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* !===============>End contact<====================== */
+/* !===============>start footer<====================== */
+.footer-section {
+  background-color: #1c1c1c;
+}
+
+/* !===============>End footer<====================== */
